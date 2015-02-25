@@ -36,12 +36,7 @@ RSpec.describe User, :type => :model do
     it "fails to validate without referral code" do
       expect(FactoryGirl.build(:user, referral_code: nil)).to_not be_valid
     end
-
-    it "has unique refferal code" do
-      FactoryGirl.create(:user, referral_code: "0123456789")
-      expect{ FactoryGirl.create(:user, referral_code: "0123456789") }.to raise_error(ActiveRecord::RecordNotUnique)
-    end
-
+    
     it "fails to validate without referrer id" do
       expect(FactoryGirl.build(:user, referrer_id: nil)).to_not be_valid
     end

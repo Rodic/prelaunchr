@@ -26,6 +26,13 @@ end
 
 group :development do
   gem 'pry'
+  gem 'thor', '0.19.1'
+  gem 'guard-rspec', '4.5.0', require: false
+end
+
+group :development, :test do
+	gem 'rspec-rails', '3.2.1'
+	gem 'factory_girl_rails', '4.5.0'
 end
 
 gem 'delayed_job_active_record'

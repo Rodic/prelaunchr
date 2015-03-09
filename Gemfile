@@ -31,8 +31,9 @@ group :development do
 end
 
 group :development, :test do
-	gem 'rspec-rails', '3.2.1'
-	gem 'factory_girl_rails', '4.5.0'
+  gem 'rspec-rails', '3.2.1'
+  gem 'factory_girl_rails', '4.5.0'
+  gem 'capybara', '2.4.4'
 end
 
 gem 'delayed_job_active_record'
